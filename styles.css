@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+}
+
+.title{
+    font-size: 40px;
+    color: #fff;
+    margin-top: 30px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.search-card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 30px;
+    padding: 40px 35px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: black;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 20px;
+    margin-top: 5px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.col1, .col2 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+.col1 img, .col2 img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.humidity, .wind {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+.weather {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+.weather.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.error-msg {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: red;
+    display: none;
+}
